@@ -1,19 +1,59 @@
-# Proyecto ETL: Análisis de Reservas de Hotel
+# Proyecto ETL: Análisis de Hoteles y Eventos en Madrid
 
 ## Descripción del Proyecto
-Este proyecto tiene como objetivo realizar un proceso ETL (Extract, Transform, Load) utilizando la biblioteca **Pandas** para analizar un archivo en formato **Parquet** que contiene información sobre reservas de hotel.
+Este proyecto es un proceso ETL (Extract, Transform, Load) que recopila y analiza datos de:
+- **Reservas de hoteles:** Obtenidas de una base de datos.
+- **Eventos en Madrid:** Recopilados a través de la API del Ayuntamiento de Madrid.
+- **Precios de hoteles IBIS en Madrid:** Obtenidos mediante web scraping.
 
-## Proceso de Análisis Exploratorio de Datos (EDA)
-Durante el análisis exploratorio de datos (EDA), se llevaron a cabo las siguientes acciones:
+Los datos fueron transformados con la biblioteca **pandas** y cargados en una base de datos.
 
-- **Limpieza de Datos:** Se realizó la limpieza de datos para garantizar la calidad de la información.
-- **Generación de IDs Únicos:** Se crearon identificadores únicos para los clientes y los nombres de los hoteles.
-- **Hallazgos Relevantes:** Se identificó que el archivo de origen no contiene información sobre los hoteles de la competencia.
+## Estructura de la Base de Datos
+- **Tablas:**
+  - `hoteles`: Información de los hoteles analizados.
+  - `eventos`: Detalles de los eventos en Madrid.
+  - `hoteles_localizacion`: Ubicación geográfica de los hoteles.
+  - `clientes`: Datos de los clientes y sus reservas.
+  - `ciudad`: Información general sobre Madrid.
 
-## Obtención de Información Adicional
-Para complementar la información faltante, se emplearon las siguientes fuentes externas:
+- **Extensión PostGIS:** Utilizada para crear la geometría de puntos a partir de coordenadas (latitud y longitud) usando EPSG 4326.
 
-- **Web de Ibis Madrid:** Se realizó un proceso de web scraping para obtener datos sobre los hoteles de la competencia.
-- **API del Ayuntamiento de Madrid:** Se consultaron los eventos ocurridos en las fechas correspondientes a las reservas.
+- **Vistas:**
+  - `eventos_rango`: Identifica eventos dentro del rango de las reservas.
+  - `hoteles_recaudacion`: Muestra la recaudación de los hoteles según su categoría (competencia o no).
 
-Esta información adicional se integró en el proceso ETL para enriquecer el análisis y ofrecer una visión más completa del contexto de las reservas.
+## Análisis y Consultas
+Los archivos `bonus_track_1` y `bonus_track_2` contienen análisis y consultas SQL que permiten conocer:
+- Número total de hoteles.
+- Precio medio, máximo y mínimo de la competencia.
+- Clientes con mayor gasto.
+
+## Proceso ETL
+### Archivos Principales
+1. **`00_EDA_Hoteles.ipynb`**: Análisis exploratorio de datos en formato Parquet.
+2. **`01_Extraccion_Web_Scraping.ipynb`**: Web scraping de precios y estrellas de 10 hoteles IBIS.
+3. **`02_Extraccion_API.ipynb`**: Obtención de datos de eventos desde la API del Ayuntamiento.
+4. **`03_Transformacion_Hoteles.ipynb`**: Preparación de tablas, creación de IDs y unión de hoteles propios y de la competencia.
+5. **`04_Carga_a_BBDD.py`**: Carga de datos en la base de datos mediante funciones de la carpeta `SRC`.
+
+### Estructura de Carpetas
+- **`SRC`**: Contiene funciones para:
+  - Subir datos a la base de datos usando `psycopg2`.
+  - Convertir archivos CSV en dataframes.
+- **`datos_a_db`**: Dataframes transformados listos para la carga.
+- **`datos_entrada`**: Datos fuente, incluido el archivo Parquet de hoteles.
+
+## Librerías Utilizadas
+- `pandas`, `psycopg2`, `requests`, `beautifulsoup4`, `selenium`, `seaborn`, `matplotlib`, `geopandas`
+
+## Seguridad
+- El archivo `.gitignore` excluye las credenciales de la base de datos.
+
+## Visualización Geoespacial
+- Se generó un mapa con **GeoPandas** y **Matplotlib** para mostrar la ubicación de hoteles y eventos.
+
+## Contacto
+¿Tienes preguntas o sugerencias? Contáctanos a través de este repositorio de GitHub.
+
+¡Gracias por consultar nuestro proyecto!
+

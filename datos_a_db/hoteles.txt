@@ -1,0 +1,30 @@
+id_hotel,nombre_hotel,fecha_reserva,valoracion,competencia,id_ciudad
+hotel_02,Hotel Monte Verde,2025-02-09,3.1032608695652173,False,1
+hotel_03,Hotel Brisas del Mar,2025-02-08,3.091078066914498,False,1
+hotel_04,Hotel Camino del Sol,2025-02-02,3.072519083969466,False,1
+hotel_05,Hotel Puerta del Cielo,2025-02-08,3.0338983050847457,False,1
+hotel_06,Hotel Encanto Real,2025-02-09,3.023166023166023,False,1
+hotel_07,Palacio del Sol,2025-02-10,2.988372093023256,False,1
+hotel_08,Hotel Jardines del Rey,2025-02-02,2.9450980392156865,False,1
+hotel_09,Hotel Las Estrellas,2025-02-10,2.9042145593869733,False,1
+hotel_10,Gran Hotel Madrid,2025-02-01,3.0592734225621414,False,1
+hotel_11,Hotel Torre Dorada,2025-02-01,2.9242718446601943,False,1
+hotel_12,Hotel Palacio Imperial,2025-02-12,3.008528784648188,False,1
+hotel_13,Hotel Luz de Madrid,2025-02-06,3.049907578558225,False,1
+hotel_14,Hotel Los Almendros,2025-02-09,3.01113172541744,False,1
+hotel_15,Hotel Sol y Luna,2025-02-02,3.012522361359571,False,1
+hotel_16,Hotel Mirador Real,2025-02-09,2.9776119402985075,False,1
+hotel_17,Hotel Rincón Sereno,2025-02-02,3.0,False,1
+hotel_18,Hotel Vista Alegre,2025-02-09,2.940384615384616,False,1
+hotel_19,Hotel Costa Azul,2025-02-11,3.105566218809981,False,1
+hotel_20,Hotel Maravilla Real,2025-02-02,2.974842767295597,False,1
+hotel_21,ibis Styles Madrid Prado3 Star rating,2025-02-19,4.7,True,1
+hotel_22,ibis Madrid Centro las Ventas2 Star rating,2025-02-19,4.5,True,1
+hotel_23,ibis budget Madrid Vallecas1 Star rating,2025-02-19,4.3,True,1
+hotel_24,ibis Madrid Aeropuerto Barajas2 Star rating,2025-02-19,4.4,True,1
+hotel_25,ibis Madrid Alcorcon Tresaguas2 Star rating,2025-02-19,4.4,True,1
+hotel_26,ibis budget Madrid Aeropuerto1 Star rating,2025-02-19,4.0,True,1
+hotel_27,ibis Madrid Alcobendas2 Star rating,2025-02-19,4.4,True,1
+hotel_28,Ibis budget Madrid Alcorcón Móstoles2 Star rating,2025-02-19,4.5,True,1
+hotel_29,ibis Madrid Fuenlabrada2 Star rating,2025-02-19,4.4,True,1
+hotel_30,ibis Madrid Alcala de Henares La Garena3 Star rating,2025-02-19,4.5,True,1

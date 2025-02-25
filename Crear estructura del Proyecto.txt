@@ -1,5 +1,0 @@
-Crear estructura del Proyecto
-Hacer un EDA del parquet
-Hacer scrapping de la web, como llego a los 10 hoteles, que datos necesito
-Bichear la API del ayuntamiento de Madrid, ver que informacion nos da la API
-
