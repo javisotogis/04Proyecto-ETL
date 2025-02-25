@@ -35,6 +35,7 @@ Los archivos `bonus_track_1` y `bonus_track_2` contienen análisis y consultas S
 3. **`02_Extraccion_API.ipynb`**: Obtención de datos de eventos desde la API del Ayuntamiento.
 4. **`03_Transformacion_Hoteles.ipynb`**: Preparación de tablas, creación de IDs y unión de hoteles propios y de la competencia.
 5. **`04_Carga_a_BBDD.py`**: Carga de datos en la base de datos mediante funciones de la carpeta `SRC`.
+6. **`05_Mapa.py`**: Muestra la localizacion de los datos.
 
 ### Estructura de Carpetas
 - **`SRC`**: Contiene funciones para:
@@ -51,9 +52,18 @@ Los archivos `bonus_track_1` y `bonus_track_2` contienen análisis y consultas S
 
 ## Visualización Geoespacial
 - Se generó un mapa con **GeoPandas** y **Matplotlib** para mostrar la ubicación de hoteles y eventos.
+- Se conecta a la base de datos usando `psycopg2`.
+- Se obtienen los datos de las tablas `hoteles_localizacion` y `eventos`.
+- Los hoteles se muestran en azul con sus `id_hotel` como etiquetas.
+- Los eventos se muestran en el mapa sin categorizar.
+- Se generan los poligonos de Voronoi para determinar el area de influencia de los hoteles
+- Los resultados de exportan en el archivo **Hoteles Influencia Area Mapa.**
+
+Este código es multiplataforma y solo usa las bibliotecas solicitadas: **psycopg2**, **pandas**, **geopandas** y **matplotlib**.
+
 
 ## Contacto
-¿Tienes preguntas o sugerencias? Contáctanos a través de este repositorio de GitHub.
+¿Tienes preguntas o sugerencias? Contáctame a través de este repositorio de GitHub.
 
-¡Gracias por consultar nuestro proyecto!
+¡Gracias por consultar mi proyecto!
 
