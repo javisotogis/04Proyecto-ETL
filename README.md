@@ -1,4 +1,4 @@
-# Proyecto ETL: Análisis de Hoteles y Eventos en Madrid
+# Análisis de Hoteles y Eventos en Madrid
 
 ## Descripción del Proyecto
 Este proyecto es un proceso ETL (Extract, Transform, Load) que recopila y analiza datos de:
